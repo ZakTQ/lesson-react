@@ -1,8 +1,15 @@
 import './App.css';
 import React from 'react';
+import { Route, Routes, Outlet } from 'react-router-dom';
+
 import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header';
+import Messages from './components/Nav/Messages/Messages'
+import Music from './components/Nav/Music/Music'
+import News from './components/Nav/News/News'
+import Profile from './components/Nav/Profile/Profile';
+
 
 const App = () => {
   return (
@@ -10,37 +17,22 @@ const App = () => {
       <Header />
       <Nav />
 
-      <div className='content'>
-        <div className='content-img'>
-          <img src="http://betafinance.ru/sites/default/files/news/b655c76706b606569ff3d1a1f4ce04e6.jpg" alt="" />
-        </div>
+      {/* ///////////////////////////////////// */}
 
-        <div>
-          <div>
-            ava+description
-          </div>
+      <Routes>
+          <Route path='profile' element={<Profile />} />
+          <Route path='messages' element={<Messages />} />
+          <Route path='news' element={<News />} />
+          <Route path='music' element={<Music />} />
+      </Routes>
 
-          <div>
-            My posts
+      <Outlet />
 
-            <div>
-              new post
-            </div>
-
-            <div>
-              <ul>
-                <li>post1</li>
-                <li>post1</li>
-                <li>post1</li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-      </div>
+      {/* ///////////////////////////////////// */}
 
       <Footer />
     </div>
+
   );
 }
 

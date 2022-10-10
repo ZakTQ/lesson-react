@@ -12,13 +12,13 @@ ul {
     list-style: none;
 }
 
-a{
+a {
     display: inline-block;
     text-decoration: none;
     color: inherit;
 }
 
-a:hover{
+a:hover {
     color: blue;
 }
 
@@ -28,10 +28,10 @@ a:hover{
 .app-wrapper {
     display: grid;
 
-    grid-template-areas: 
-    "header header header"
-    "nav content content"
-    "footer footer footer";
+    grid-template-areas:
+        "header header header"
+        "nav content content"
+        "footer footer footer";
 
     grid-template-rows: 100px 1fr;
     grid-template-columns: 2fr 10fr;
@@ -46,15 +46,13 @@ a:hover{
     background-color: rgb(203, 255, 219);
 }
 
-
-
 .content {
     grid-area: content;
     background-color: rgb(193, 208, 240);
     min-height: 500px;
 }
 
-.content-img{
+.content-img {
     height: 200px;
     overflow: hidden;
 }
@@ -64,10 +62,16 @@ a:hover{
 
 .nav {
     grid-area: nav;
+    min-width: 250px;
     background-color: rgb(218, 218, 218);
 }
 
 .messages {
+}
+
+.active {
+    font-weight: 600;
+    color: rgb(24, 224, 58);
 }
 
 .footer {

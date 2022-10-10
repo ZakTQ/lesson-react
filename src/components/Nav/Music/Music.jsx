@@ -2,8 +2,8 @@ import React from 'react';
 
 const Music = () => {
     return (
-        <div>
-            
+        <div className='content'>
+            music
         </div>
     );
 };

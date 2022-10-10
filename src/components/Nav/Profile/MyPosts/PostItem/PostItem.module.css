@@ -1,0 +1,25 @@
+.item{
+    display: flex;
+    align-items: center;
+
+    background-color: rgb(201, 181, 219);
+    padding: 10px;
+    margin: 10px;
+    max-width: 400px;
+    border-radius: 10px;
+    min-height: 30px;
+}
+.text{
+    padding-left: 30px;
+    margin: 0 10px;
+}
+.avatar{
+    display: flex;
+}
+.avatar img{
+    width: 60px;
+    border-radius: 50%;
+}
+.item span{
+    display: flex;
+}
