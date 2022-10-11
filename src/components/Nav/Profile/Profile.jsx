@@ -5,11 +5,9 @@ import MyPosts from './MyPosts/MyPosts';
 const Profile = () => {
 
     return (
-        <div>
-            <div className='content'>
-                <UserInfo />
-                <MyPosts />
-            </div>
+        <div className='content'>
+            <UserInfo />
+            <MyPosts />
         </div>
     );
 };

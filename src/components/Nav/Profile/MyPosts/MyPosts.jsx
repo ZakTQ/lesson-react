@@ -31,6 +31,8 @@ const MyPosts = () => {
         <div>
             <div>
                 <textarea></textarea>
+            </div>
+            <div>
                 <button>add post</button>
             </div>
             <div>

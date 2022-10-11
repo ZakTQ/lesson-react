@@ -6,58 +6,50 @@ import UnitDialog from './Dialog/UnitDialog/UnitDialog';
 import Dialog from './Dialog/Dialog';
 import { Outlet, Route, Routes } from 'react-router-dom';
 
-const messagesData = [
-    { message: 'hey' },
-]
 
-const DialogData = [
-    {
-        name: 'aliNa',
-        id: '1'
-    },
-    {
-        name: 'sver',
-        id: '2'
-    },
-    {
-        name: 'kowka',
-        id: '3'
-    },
-    {
-        name: 'koko',
-        id: '4'
-    },
-]
+const UnitDialogItem = (props) => {
 
-const DialogRender = () => {
-
+    return (
+        <div>
+            <UnitDialog text={'hey'} />
+            <UnitDialog text={'wow'} />
+            <UnitDialog text={'wake up!'} />
+        </div>
+    )
 }
 
-const Messages = () => {
+
+const Messages = (props) => {
+
+    let messagesData = props.messagesData
+
+    let dialogData = props.dialogsData
+
+    const dialogElements = dialogData.map(dialog => (
+        <Dialog name={dialog.name} id={dialog.id} />
+    ))
+
+    const messagesElements = messagesData.map(message => (
+        <UnitDialog text={message.message} />
+    ))
 
     return (
         <div className='content'>
 
             <div className={s.container}>
                 <div className={s.dialog}>
-                    <Dialog name={'aliNa'} id={'1'} />
-                    <Dialog name={'sver'} id={'2'} />
-                    <Dialog name={'koko'} id={'3'} />
+                    {dialogElements}
                 </div>
 
                 <div className={s.messages}>
-                    <UnitDialog text={'hey'}/>
-                    <UnitDialog text={'wow'}/>
-                    <UnitDialog text={'wake up!'}/>
-
-                    <Routes>
-                        <Route path='dialog1' element={<UnitDialog />} />
-                        <Route path='dialog2' element={<UnitDialog />} />
-                        <Route path='dialog3' element={<UnitDialog />} />
-                    </Routes>
-
-                    <Outlet />
+                    {messagesElements}
                 </div>
+
+                <Routes>
+                    <Route path='messages/*' element={<UnitDialog />} />
+                </Routes>
+
+                <Outlet />
             </div>
         </div>
     );

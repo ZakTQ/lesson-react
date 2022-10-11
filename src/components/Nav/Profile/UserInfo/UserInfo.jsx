@@ -37,7 +37,10 @@ const UserInfo = () => {
             </div>
 
             <div>
-                tyt oshibki!
+                tyt oshibki!11111111
+                <div>
+                    11111
+                </div>
             </div>
         </div>
     )
