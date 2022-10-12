@@ -1,32 +1,13 @@
 import React from 'react';
 import PostItem from './PostItem/PostItem'
 
-const state = [
-    {
-        message: 'hello',
-        like: 11
-    },
-    {
-        message: 'buy',
-        like: 23
-    },
-    {
-        message: 'hey',
-        like: 7
-    },
-    {
-        message: 'dont worry',
-        like: 5
-    },
-    {
-        message: 'go on',
-        like: 2
-    },
-]
 
-let postList = state.map(e => <PostItem message={e.message} like={e.like} />)
 
-const MyPosts = () => {
+
+const MyPosts = (props) => {
+
+    let postList = props.myPostsData.map(e => <PostItem message={e.message} like={e.like} />)
+
     return (
         <div>
             <div>

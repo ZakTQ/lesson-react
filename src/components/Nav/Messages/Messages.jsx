@@ -1,22 +1,10 @@
 import React from 'react';
 
 import s from './../Messages/Messages.module.css';
-
 import UnitDialog from './Dialog/UnitDialog/UnitDialog';
 import Dialog from './Dialog/Dialog';
+
 import { Outlet, Route, Routes } from 'react-router-dom';
-
-
-const UnitDialogItem = (props) => {
-
-    return (
-        <div>
-            <UnitDialog text={'hey'} />
-            <UnitDialog text={'wow'} />
-            <UnitDialog text={'wake up!'} />
-        </div>
-    )
-}
 
 
 const Messages = (props) => {
@@ -35,7 +23,6 @@ const Messages = (props) => {
 
     return (
         <div className='content'>
-
             <div className={s.container}>
                 <div className={s.dialog}>
                     {dialogElements}
@@ -44,12 +31,6 @@ const Messages = (props) => {
                 <div className={s.messages}>
                     {messagesElements}
                 </div>
-
-                <Routes>
-                    <Route path='messages/*' element={<UnitDialog />} />
-                </Routes>
-
-                <Outlet />
             </div>
         </div>
     );

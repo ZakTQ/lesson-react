@@ -1,0 +1,23 @@
+.titleImg {
+    height: 200px;
+    overflow: hidden;
+}
+
+.blockInfo{
+    padding: 10px;
+    background-color: #fff;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 20px;
+
+    border: 1px solid #000;
+    filter: drop-shadow(6px 6px 2px #000000);
+}
+
+.blockInfo p{
+    background-color: rgb(204, 204, 204);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}

@@ -1,6 +1,7 @@
-.item{
+.item {
     display: flex;
     align-items: center;
+    
 
     background-color: rgb(201, 181, 219);
     padding: 10px;
@@ -8,18 +9,34 @@
     max-width: 400px;
     border-radius: 10px;
     min-height: 30px;
+
+    border: 1px solid #000;
+    filter: drop-shadow(6px 6px 2px #000000);
 }
-.text{
-    padding-left: 30px;
-    margin: 0 10px;
-}
-.avatar{
+.avatar {
     display: flex;
 }
-.avatar img{
+.avatar img {
     width: 60px;
     border-radius: 50%;
 }
-.item span{
+.item span {
+    display: flex;
+}
+
+.like span {
+    background-color: #fff;
+}
+
+.text {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+.message {
+    display: flex;
+}
+.like {
     display: flex;
 }

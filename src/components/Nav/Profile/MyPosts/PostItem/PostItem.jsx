@@ -10,10 +10,13 @@ const PostItem = (props) => {
             <div className={s.avatar}>
                 <img src="https://abrakadabra.fun/uploads/posts/2021-12/thumbs/1640231616_19-abrakadabra-fun-p-avi-dlya-vatsapp-20.jpg" alt="avatar" />
             </div>
+
             <div className={s.text}>
-                {message}
-                <p>
-                    like: {like}
+                <div className={s.message}>
+                    {message}
+                </div>
+                <p className={s.like}>
+                    like: <span>{like}</span>
                 </p>
             </div>
         </div>
