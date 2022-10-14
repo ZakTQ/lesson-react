@@ -11,31 +11,33 @@ import News from './components/Nav/News/News'
 import Profile from './components/Nav/Profile/Profile';
 
 
-
 const App = (props) => {
-
 
   return (
     <div className="app-wrapper">
       <Header />
       <Nav />
 
-      {/* ///////////////////////////////////// */}
-
       <Routes>
-        <Route path='/' index element={<Profile myPostsData={props.state.myPostsData} />} />
-        <Route path="messages" element={<Messages dialogsData={props.state.dialogsData} messagesData={props.state.messagesData} />} />
+        <Route path='/' index element={
+          <Profile
+            myPostsData={props.state.myPostsData}
+            addPost={props.addPost}
+            updateNewPostText={props.updateNewPostText}
+            newPostText={props.state.newPostText} />}
+        />
+        <Route path="messages" element={
+          <Messages
+            dialogsData={props.state.dialogsData}
+            messagesData={props.state.messagesData} />}
+        />
         <Route path='news' element={<News />} />
         <Route path='music' element={<Music />} />
       </Routes>
 
       <Outlet />
-
-      {/* ///////////////////////////////////// */}
-
       <Footer />
     </div>
-
   );
 }
 

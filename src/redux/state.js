@@ -1,3 +1,6 @@
+import { rerenderEnrireTree } from '../index'
+
+
 let state = {
 
     dialogsData: [
@@ -52,14 +55,17 @@ let state = {
 
     myPostsData: [
         {
+            id: 1,
             message: 'hello !',
             like: 11
         },
         {
+            id: 2,
             message: 'buy coffe&!&!&!',
             like: 5
         },
         {
+            id: 3,
             message: 'Im sleeping >_<!!!',
             like: 7
         },
@@ -73,6 +79,23 @@ let state = {
         from: "New York",
     },
 
+    newPostText: 'it-com',
+}
+
+export let addPost = (postMessage) => {
+    let newPost = {
+        id: 5,
+        message: postMessage,
+        like: 2
+    }
+
+    state.myPostsData.push(newPost)
+    rerenderEnrireTree(state)
+}
+
+export let updateNewPostText = (newText) => {
+    state.newPostText = newText
+    rerenderEnrireTree(state)
 }
 
 export default state;
