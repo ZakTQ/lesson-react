@@ -21,10 +21,10 @@ const App = (props) => {
       <Routes>
         <Route path='/' index element={
           <Profile
-            myPostsData={props.state.myPostsData}
+            myPostsData={props.state.profileData.myPostsData}
             addPost={props.addPost}
             updateNewPostText={props.updateNewPostText}
-            newPostText={props.state.newPostText} />}
+            newPostText={props.state.profileData.newPostText} />}
         />
         <Route path="messages" element={
           <Messages
